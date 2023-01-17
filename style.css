@@ -18,36 +18,32 @@
 body *{
     font-family: 'Open Sans';
 }
-
 body{
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  font-size: 1.6rem;
-  background-color: var(--backgorubd);
+    font-size: 1.6rem;
+    background: var(--backgorubd);
+    width: 100%;
 }
+
 .card{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 58.8rem;
+    margin: 2rem auto 0;
     gap: 6rem;
-    width: min(51.4rem,87%);
-    align-items: center;
 }
 
-/* Logo */
-header{
-    display: flex;
-    margin-top: 3.3rem;
-}
 
-.header__logo{
+header img{
+    display: block;
+    margin:auto;
     width: 12.1rem;
 }
 
-/* Main */
 main{
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
     gap: 3rem;
 }
@@ -57,18 +53,17 @@ main{
     line-height: 3.2rem;
     color: var(--text-primary);
 }
-
 .content__texts{
     display: flex;
     align-items: center ;
+    justify-content: center;
     flex-direction: column;
     gap: 1rem;
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 2.1rem;
-    color: var(--text-primary   );
+    color: var(--text-primary);
 }
-
 .content__btn{
     background-color: var(--back-red);
     color: var(--color-secundary);
@@ -80,7 +75,7 @@ main{
     line-height: 1.6rem;
     cursor: pointer;
 }
-/* Form */
+
 form{
     background-color: var(--back-red);
     padding: 2.5rem 6.4rem;
@@ -100,7 +95,6 @@ form{
     font-weight: 700;
     line-height: 3.2rem;
 }
-
 .inputs{
     display: flex;
     flex-direction: column;
@@ -142,8 +136,6 @@ form{
     cursor: pointer;
     color: var(--text-primary);
 }
-
-/* Doadores */
 .doadores__title{
     color: #EA1A49;
     font-weight: 700;
@@ -159,12 +151,11 @@ form{
     display: flex;
     flex-direction: row;
 }
-
 .dorno{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.4rem;
+    gap: 2rem;
 }
 .dorno__blod{
     display: flex;
@@ -184,12 +175,12 @@ form{
     width: 4rem;
     height: 4rem;
 }
+
 .dorno__text{
     font-weight: 600;
     line-height: 2.1rem;
     text-align: center;
 }
-/* footer */
 footer{
     display: flex;
     align-items: center;
@@ -203,4 +194,40 @@ footer{
 .footer__text{
     color: #EA1A49;
 }
+@media (max-width:250px)  {
+    body{
+        margin: 0 5px;
+    }
+}
 
+@media (max-width:568px) {
+    body{
+        margin: 0 5px;
+    }
+    form{
+        padding: 2.5rem 6.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        border-radius: 0.6rem;
+    }
+    .form__title{
+        text-align: center;
+        width: 27rem;
+        font-size: 1.6rem;
+    }
+
+    .inputs{
+        width: 22rem;
+    }
+    .form__input ,.form__btn{
+        padding: 0.5rem 1.3rem;
+        border-radius: 0.4rem;
+    }
+    .dornos{
+        display: grid;
+        grid-template-columns: 2fr 2fr; 
+        gap: 6rem;
+    }   
+}
