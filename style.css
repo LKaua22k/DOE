@@ -194,12 +194,6 @@ footer{
 .footer__text{
     color: #EA1A49;
 }
-@media (max-width:250px)  {
-    body{
-        margin: 0 5px;
-    }
-}
-
 @media (max-width:568px) {
     form{
         padding: 2.5rem 6.4rem;
